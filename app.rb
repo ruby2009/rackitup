@@ -9,7 +9,7 @@ require_relative 'hairy'
    def initialize(env)
      @env = env
      @path = env["PATH_INFO"]
-     @num = env["REQUEST_PATH"].sub(/\/\w+[|\/]/, "").to_i
+     @num = env["PATH_INFO"].sub(/\/\w+[|\/]/, "").to_i
      @num = 1 if @num.zero?
      p env
    end
